@@ -38,6 +38,7 @@ final class Parser implements IUrlChecker
         $data->clear();
         unset($data);
         print_r($img);
+        print('<br>');
         return $img;
     }
 
@@ -63,8 +64,9 @@ final class Parser implements IUrlChecker
         if (empty($href)) {
             array_push($href, "Ссылки не найдены.<br>");
         }
-        
+
         print_r($href);
+        print('<br>');
         $html->clear();
         unset($html);
         return $href;
