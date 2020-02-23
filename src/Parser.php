@@ -17,7 +17,6 @@ final class Parser implements IUrlChecker
     public function getBrokenImage($url): array
     {
         $img = array();
-        $img2 = array();
         $data = file_get_html($url);
         if (count($data->find('img'))) {
             foreach ($data->find('img') as $a) {
@@ -31,7 +30,7 @@ final class Parser implements IUrlChecker
             }
         }
 
-        $data->clear(); // подчищаем за собой
+        $data->clear();
         unset($data);
         return $img;
     }
